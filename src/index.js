@@ -52,10 +52,9 @@ function register () {
     });
 }
 
-function initialize () {
+function initializeServer () {
 
-    app.listen(3000, () => {
-
-        console.log('app started on 3000');
+    app.listen(process.env.PORT || 3000, () => {
+        console.log('server started');
     });
 }

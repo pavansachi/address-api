@@ -6,7 +6,22 @@ var AddressService = (function () {
     function AddressService() {
     }
     AddressService.prototype.getAddress = function (address) {
-        return " " + address.street + " " + address.suburb + " " + address.state + " " + address.postcode;
+        if (!!!address.buildingNumber) {
+            address.buildingNumber = '';
+        }
+        if (!!!address.street) {
+            address.street = '';
+        }
+        if (!!!address.suburb) {
+            address.suburb = '';
+        }
+        if (!!!address.state) {
+            address.state = '';
+        }
+        if (!!!address.postcode) {
+            address.postcode = '';
+        }
+        return address.buildingNumber + " " + address.street + " " + address.suburb + " " + address.state + " " + address.postcode;
     };
     AddressService.prototype.getResponseList = function (addressDataList) {
         var _this = this;

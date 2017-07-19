@@ -8,10 +8,13 @@ var app = new express();
 
 let service = new address_service.AddressService();
 
-register();
-initialize();
+// register end points
+registerEP();
 
-function register () {
+// initialize the node server
+initializeServer();
+
+function registerEP () {
 
     app.use( bodyParser.json()); 
         app.use(bodyParser.urlencoded({  

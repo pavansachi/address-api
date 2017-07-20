@@ -3,7 +3,7 @@ Address API
 
 The application is deployed at heroku address https://address-api.herokuapp.com/  
 
-### Lobraries used
+### Libraries used
 Express  
 Nodejs  
 Heroku  
